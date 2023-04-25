@@ -11,7 +11,7 @@ namespace API.Controllers
     //protocol-domain-path/api/controller
     [Route("api/[controller]")]
     [ApiController]
-    
+    [Authorize]
     public class BaseController<TEntity, TRepository, TKey> : Controller
         where TEntity : class
         where TRepository : IGeneralRepository<TEntity, TKey>
